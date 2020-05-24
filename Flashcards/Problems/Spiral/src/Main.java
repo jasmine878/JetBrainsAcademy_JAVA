@@ -19,9 +19,11 @@ class Main {
         
         while (count <= maxNum) {
             //fill row
-            for (int i = 0; i < edgeLength; i++) {
+            for (int i = row; i <= col; i++) {
                 if (spiralArr[row][i] == 0) {
                     spiralArr[row][i] = count;
+                    count++;
+                } else {
                     count++;
                 }
             }
@@ -53,8 +55,6 @@ class Main {
                 }
             }
             reverseCol++;
-
-            count++;
         }
         
         for (int i = 0; i < n; i++) {
