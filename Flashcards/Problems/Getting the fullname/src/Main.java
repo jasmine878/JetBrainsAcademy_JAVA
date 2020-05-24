@@ -1,11 +1,14 @@
 class User {
+    
+    private String firstName;
+    private String lastName;
 
     public static void main(String[] args) {
-//        User tim = new User();
-//        tim.setFirstName("Tim");
-//        tim.setLastName("Towler");
-//        System.out.println(tim.getFullName());
-//        // Tim Towler
+        User tim = new User();
+        tim.setFirstName("Tim");
+        tim.setLastName("Towler");
+        System.out.println(tim.getFullName());
+        // Tim Towler
 
         User katie = new User();
         katie.setFirstName("Katie");
@@ -13,9 +16,6 @@ class User {
         System.out.println(katie.getFullName());
         // Katie (without additional spaces)
     }
-
-    private String firstName;
-    private String lastName;
 
     public User() {
         this.firstName = "";
