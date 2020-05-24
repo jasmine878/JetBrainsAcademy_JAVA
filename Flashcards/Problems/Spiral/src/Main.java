@@ -1,6 +1,4 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
-import java.util.Arrays;
 
 class Main {
     public static void main(String[] args) {
@@ -8,7 +6,7 @@ class Main {
         Scanner scanner = new Scanner(System.in);
         
         int n = scanner.nextInt();
-        int[][] spiralArr = new int[n][n];
+        String[][] spiralArr = new String[n][n];
         int maxNum = n * n;
         int count = 1;
         int edgeLength = n;
@@ -20,8 +18,8 @@ class Main {
         while (count <= maxNum) {
             //fill row
             for (int i = row; i <= col; i++) {
-                if (spiralArr[row][i] == 0) {
-                    spiralArr[row][i] = count;
+                if (spiralArr[row][i] == null) {
+                    spiralArr[row][i] = count + "";
                     count++;
                 } else {
                     count++;
@@ -31,8 +29,8 @@ class Main {
 
             //fill column
             for (int i = row; i < edgeLength; i++) {
-                if (spiralArr[i][col] == 0) {
-                    spiralArr[i][col] = count;
+                if (spiralArr[i][col] == null) {
+                    spiralArr[i][col] = count + "";
                     count++;
                 }
             }
@@ -40,8 +38,8 @@ class Main {
 
             //fill reverse-row
             for (int i = edgeLength - 1; i >= 0; i--) {
-                if (spiralArr[reverseRow][i] == 0) {
-                    spiralArr[reverseRow][i] = count;
+                if (spiralArr[reverseRow][i] == null) {
+                    spiralArr[reverseRow][i] = count + "";
                     count++;
                 }
             }
@@ -49,8 +47,8 @@ class Main {
 
             //fill reverse-col
             for (int i = col; i >= row; i--) {
-                if (spiralArr[i][reverseCol] == 0) {
-                    spiralArr[i][reverseCol] = count;
+                if (spiralArr[i][reverseCol] == null) {
+                    spiralArr[i][reverseCol] = count + "";
                     count++;
                 }
             }
@@ -58,7 +56,7 @@ class Main {
         }
         
         for (int i = 0; i < n; i++) {
-            System.out.println(Arrays.toString(spiralArr[i]));
+            System.out.println(String.join(" ", spiralArr[i]));
         }
     }
 }
