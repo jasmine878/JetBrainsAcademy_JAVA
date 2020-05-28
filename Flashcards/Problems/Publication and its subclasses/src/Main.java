@@ -2,6 +2,15 @@ class Publication {
     public static void main(String[] args) {
         Publication publication = new Publication("The new era");
         System.out.println(publication.getInfo());
+
+        Newspaper newspaper = new Newspaper("Football results", "Sport news");
+        System.out.println(newspaper.getInfo());
+
+        Article article = new Article("Why the Sun is hot", "Dr James Smith");
+        System.out.println(article.getInfo());
+
+        Announcement announcement = new Announcement("Will sell a house", 30);
+        System.out.println(announcement.getInfo());
     }
 
     private String title;
@@ -12,7 +21,7 @@ class Publication {
 
     public final String getInfo() {
         // write your code here
-        return this.getType() + this.getDetails() + ": " + title;
+        return this.getType() + this.getDetails() + ": " + this.title;
     }
 
     public String getType() {
@@ -35,6 +44,15 @@ class Newspaper extends Publication {
     }
 
     // write your code here
+    @Override
+    public String getType() {
+        return "Newspaper";
+    }
+
+    @Override
+    public String getDetails() {
+        return " (source - " + source + ")";
+    }
 
 }
 
@@ -48,7 +66,15 @@ class Article extends Publication {
     }
 
     // write your code here
+    @Override
+    public String getType() {
+        return "Article";
+    }
 
+    @Override
+    public String getDetails() {
+        return " (author - " + author + ")";
+    }
 }
 
 class Announcement extends Publication {
@@ -61,5 +87,13 @@ class Announcement extends Publication {
     }
 
     // write your code here
+    @Override
+    public String getType() {
+        return "Announcement";
+    }
 
+    @Override
+    public String getDetails() {
+        return " (days to expire - " + daysToExpire + ")";
+    }
 }
