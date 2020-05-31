@@ -3,8 +3,6 @@
 //a char can be cast to a byte which is the same size
 //when you take a char and caste it to a byte, it returns a small integer < 100
 
-import java.util.Arrays;
-
 //a char is a primitive data type of a 16-bit unicode character.  \u0000 - \uffff
 //an ASCII character is a special type of char that is only 8-bit.  It's the same size as a byte
 class AsciiCharSequence implements java.lang.CharSequence {
