@@ -104,29 +104,29 @@ final class Rectangle implements MutableShape{
         return height;
     }
 
-    public void setX(float dx) {
-        this.x += dx;
-    }
-
-    public void setY(float dy) {
-        this.y += dy;
-    }
-
-    public void setWidth(float factor) {
-        this.width *= factor;
-    }
-
-    public void setHeight(float factor) {
-        this.height *= factor;
-    }
+//    public void setX(float dx) {
+//        this.x += dx;
+//    }
+//
+//    public void setY(float dy) {
+//        this.y += dy;
+//    }
+//
+//    public void setWidth(float factor) {
+//        this.width *= factor;
+//    }
+//
+//    public void setHeight(float factor) {
+//        this.height *= factor;
+//    }
 
     public void move(float dx, float dy) {
-        this.setX(dx);
-        this.setY(dy);
+        x += dx;
+        y += dy;
     }
 
     public void scale(float factor) {
-        this.setWidth(factor);
-        this.setHeight(factor);
+        width *= factor;
+        height *= factor;
     }
 }
