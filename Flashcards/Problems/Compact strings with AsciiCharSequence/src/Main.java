@@ -1,9 +1,9 @@
-import java.util.Arrays;
-
 //a byte is a sequence of 0's and 1's.  It's 8-bits
 //a byte can be converted to a char which is the same size
 //a char can be cast to a byte which is the same size
 //when you take a char and caste it to a byte, it returns a small integer < 100
+
+import java.util.Arrays;
 
 //a char is a primitive data type of a 16-bit unicode character.  \u0000 - \uffff
 //an ASCII character is a special type of char that is only 8-bit.  It's the same size as a byte
@@ -12,7 +12,7 @@ class AsciiCharSequence implements java.lang.CharSequence {
     public byte[] byteArr;
 
     public AsciiCharSequence(byte[] byteArr) {
-        this.byteArr = byteArr;
+        this.byteArr = byteArr.clone();
     }
 
     @Override
@@ -41,7 +41,7 @@ class AsciiCharSequence implements java.lang.CharSequence {
     }
 
 //Arrays.toString(byteArr) is valid code.  However the tests won't pass it
-//It's the same as new String(byteArr)
+//Arrays.toString(byteArr) is the same as new String(byteArr)
     @Override
     public String toString() {
 //        return java.util.Arrays.toString(byteArr);
