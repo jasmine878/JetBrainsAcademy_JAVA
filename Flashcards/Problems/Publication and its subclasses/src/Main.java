@@ -1,4 +1,6 @@
 class Publication {
+    private String title;
+    
     public static void main(String[] args) {
         Publication publication = new Publication("The new era");
         System.out.println(publication.getInfo());
@@ -12,8 +14,6 @@ class Publication {
         Announcement announcement = new Announcement("Will sell a house", 30);
         System.out.println(announcement.getInfo());
     }
-
-    private String title;
 
     public Publication(String title) {
         this.title = title;
