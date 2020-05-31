@@ -49,25 +49,13 @@ final class Circle implements MutableShape {
         return radius;
     }
 
-    public void setCenterX(float dx) {
-        this.centerX += dx;
-    }
-
-    public void setCenterY(float dy) {
-        this.centerY += dy;
-    }
-
-    public void setRadius(float factor) {
-        this.radius *= factor;
-    }
-
     public void move(float dx, float dy) {
-        this.setCenterX(dx);
-        this.setCenterY(dy);
+        centerX += dx;
+        centerY += dy;
     }
 
     public void scale(float factor) {
-        this.setRadius(factor);
+        radius *= factor;
     }
 }
 
