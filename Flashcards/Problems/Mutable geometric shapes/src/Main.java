@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 interface Movable {
 
     void move(float dx, float dy);
@@ -61,7 +59,7 @@ final class Circle implements MutableShape {
     }
 }
 
-final class Rectangle implements MutableShape{
+final class Rectangle implements MutableShape {
 
     /**
      * Defines the X coordinate of the upper-left corner of the rectangle.
