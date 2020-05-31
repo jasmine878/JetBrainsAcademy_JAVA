@@ -49,11 +49,13 @@ final class Circle implements MutableShape {
         return radius;
     }
 
+    @Override
     public void move(float dx, float dy) {
         centerX += dx;
         centerY += dy;
     }
 
+    @Override
     public void scale(float factor) {
         radius *= factor;
     }
@@ -104,27 +106,13 @@ final class Rectangle implements MutableShape{
         return height;
     }
 
-//    public void setX(float dx) {
-//        this.x += dx;
-//    }
-//
-//    public void setY(float dy) {
-//        this.y += dy;
-//    }
-//
-//    public void setWidth(float factor) {
-//        this.width *= factor;
-//    }
-//
-//    public void setHeight(float factor) {
-//        this.height *= factor;
-//    }
-
+    @Override
     public void move(float dx, float dy) {
         x += dx;
         y += dy;
     }
 
+    @Override
     public void scale(float factor) {
         width *= factor;
         height *= factor;
