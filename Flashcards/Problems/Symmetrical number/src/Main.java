@@ -11,11 +11,10 @@ class Main {
             str = "00" + str;
         }
 
-        if (str.charAt(0) != str.charAt(3) || str.charAt(1) != str.charAt(2)) {
-            System.out.println(Integer.parseInt(str) + 1);
-        } else {
+        if (str.charAt(0) == str.charAt(3) && str.charAt(1) == str.charAt(2)) {
             System.out.println(1);
+        } else {
+            System.out.println(Integer.parseInt(str) + 1);
         }
-
     }
 }
